@@ -1,0 +1,6 @@
+p{width: 45%;margin-top: 10px;margin-left: 20px;float: left;padding: 10px;box-sizing: border-box;display: inline-block;height: 140px;}
+.title{font-size: 20px;font-weight: bold;color: #00f;}
+#spring{background-color: hotpink;color: brown;}
+#summer{background-color: orange;color: #00f;}
+#autumn{background-color: yellow;color: black;}
+#winter{background-color: gray;color: green;}
