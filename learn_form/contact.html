@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>
+			Contact - Luong Tran Quang Vinh
+		</title>
+        <script>
+            function save_contact()
+            {
+                var name = mycontact.name.value;
+                var email = mycontact.email.value;
+                var gender = mycontact.gender.checked==true?"woman":"man";
+                
+                var table_output_body = document.getElementById("table_output_body");
+                var row = "<tr style='background-color:yellow'><td>" + name + "</td><td>" + email + "</td><td>" + gender + "</td></tr>";
+                if (gender == "woman")
+                    row = "<tr style='background-color:pink'><td>" + name + "</td><td>" + email + "</td><td>" + gender + "</td></tr>";
+                table_output_body.innerHTML += row;
+                
+                mycontact.name.value = "";
+                mycontact.email.value = "";
+                mycontact.gender.checked = false;
+            }
+            
+            function clear_contacts()
+            {
+                document.getElementById("table_output_body").innerHTML = "";
+            }
+        </script>
+	</head>
+	<body>
+		<form name="mycontact">
+            <table id="table_input">
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" id="name"/></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" name="email" id="email"/></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td><input type="checkbox" name="gender" id="gender" value="woman"/>
+                        <label for="gender">Is woman</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><button type="button" onclick="save_contact()">Save</button></td>
+                    <td><button type="button" onclick="clear_contacts()">Clear</button></td>
+                </tr>
+            </table>
+            <br>
+            <table border="1">
+                <caption>List of people</caption>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                </tr>
+                <tbody id="table_output_body">
+                    
+                </tbody>
+            </table>
+        </form>
+	</body>
+</html>
