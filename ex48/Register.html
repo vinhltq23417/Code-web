@@ -1,13 +1,24 @@
 <html>
   <head>
     <title>Register - Luong Tran Quang Vinh</title>
-  </heads>
+    <script>
+      function registerForm() 
+      {
+        alert("Registration successful!");
+        return false;
+      }
+      function resetForm() {
+        document.forms[0].reset();
+        alert("Form has been reset!");
+      }
+    </script>
+  </head>
   <body bgcolor="#99CCFF">
     <div align="center">
       <img src="images/Jackson.gif" alt="Jackson Electronics">
       <h2>Registration Form</h2>
       <p>Register your Jackson Electronics product here</p>
-      <form>
+      <form onsubmit="return registerForm()">
         <table border="0" cellpadding="5" cellspacing="0" bgcolor="#99CCFF">
           <tr>
             <td>First Name:</td>
@@ -92,8 +103,8 @@
           </tr>
           <tr>
             <td colspan="4" align="center">
-              <input type="submit" value="Click to register">
-              <input type="reset" value="Click to cancel">
+              <input type="submit" value="Register">
+              <input type="button" value="Cancel" onclick="resetForm()">
             </td>
           </tr>
         </table>

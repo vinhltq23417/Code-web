@@ -1,6 +1,23 @@
 <html>
     <head>
         <title>Online Classifieds Search Form - Luong Tran Quang Vinh</title>
+        <script>
+            function searchForm()
+            {
+                alert("Search simulation completed!");
+                return false;
+            }            
+            function showHelp()
+            {
+                alert("Help: Please fill in all required fields and click Search to find classified ads.");
+                return false;
+            }
+            function clearForm()
+            {
+                document.forms[0].reset();
+                return false;
+            }
+        </script>
     </head>
     <body>
         <div align="center">
@@ -9,7 +26,7 @@
                     <td>
                         <h1 style="color:red;">Online Classifieds Search Form</h1>
                         <hr>
-                        <form>
+                        <form onsubmit="return searchForm()">
                             <p><b>1) Search for a classified in the following sections:</b></p>
                             <table border="0" cellpadding="3">
                                 <tr>
@@ -47,8 +64,8 @@
                             <input type="text" name="keywords" size="70">
                             <p><b>5) Click one of the options below:</b></p>
                             <input type="image" src="Search.gif" alt="Search">
-                            <input type="image" src="Help.gif" alt="Help">
-                            <input type="image" src="Cancel.gif" alt="Cancel">
+                            <input type="image" src="Help.gif" alt="Help" onclick="return showHelp()">
+                            <input type="image" src="Cancel.gif" alt="Cancel" onclick="return clearForm()">
                         </form>
                     </td>
                 </tr>
