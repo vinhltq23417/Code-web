@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Newborn Registration - Luong Tran Quang Vinh</title>
+    <style>
+        .form-container
+        {
+            width: 600px;
+            margin: 40px auto;
+            padding: 15px 25px;
+            background-color: #008080;
+            border: 2px solid black;
+        }
+        h2
+        {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+        table
+        {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td
+        {
+            padding: 5px;
+            vertical-align: top;
+        }
+        .form-row
+        {
+            color: white;
+        }
+        .form-row label
+        {
+            color: white;
+            font-size: 14px;
+            margin-right: 5px;
+        }
+        input, select
+        {
+            background-color: white;
+            border: 1px solid gray;
+            color: black;
+            padding: 3px;
+            margin-right: 5px;
+        }
+        select[multiple]
+        {
+            width: 220px;
+            height: 75px;
+        }
+        .button-area
+        {
+            text-align: center;
+            margin-top: 10px;
+        }
+        input[type="button"]
+        {
+            background-color: #e0e0e0;
+            color: black;
+            border: 1px solid #999;
+            padding: 3px 15px;
+            margin: 3px;
+            cursor: pointer;
+        }
+        input[type="button"]:hover
+        {
+            background-color: #d8d8d8;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <img src="Logo.gif" style="display:block; margin:auto; margin-bottom:10px;">
+        <h2>Newborn Registration</h2>
+        <form name="frm_newborn">
+            <table>
+                <tr class="form-row">
+                    <td style="width: 315px;">
+                        <label>1) Date:</label>
+                        <input type="date" name="date" style="width:120px">
+                    </td>
+                    <td></td>
+                </tr>
+                <tr class="form-row">
+                    <td>
+                        <label>2) Infant's first name:</label>
+                        <input type="text" name="infant_fname">
+                    </td>
+                    <td>
+                        <label>Last:</label>
+                        <input type="text" name="infant_lname" size="13">
+                    </td>
+                </tr>
+                <tr class="form-row">
+                    <td>
+                        <label>3) Medical Record #:</label>
+                        <input type="text" name="medical_record">
+                    </td>
+                    <td></td>
+                </tr>
+                <tr class="form-row">
+                    <td>
+                        <label>4) Date of birth:</label>
+                        <input type="date" name="dob" style="width:120px">
+                    </td>
+                    <td></td>
+                </tr>
+                <tr class="form-row">
+                    <td>
+                        <label>5) Birth weight (kg):</label>
+                        <input type="text" name="weight" style="width:80px">
+                    </td>
+                    <td></td>
+                </tr>
+                <tr class="form-row">
+                    <td>
+                        <label>6) APGAR score:</label>
+                        <input type="text" name="apgar" style="width:60px">
+                    </td>
+                    <td></td>
+                </tr>
+                <tr class="form-row">
+                    <td>
+                        <label>7) Mother's first name:</label>
+                        <input type="text" name="mother_fname" size="19">
+                    </td>
+                    <td>
+                        <label>Last:</label>
+                        <input type="text" name="mother_lname" size="15">
+                    </td>
+                </tr>
+                <tr class="form-row">
+                    <td>
+                        <label>8) Father's first name:</label>
+                        <input type="text" name="father_fname" size="20px">
+                    </td>
+                    <td>
+                        <label>Last:</label>
+                        <input type="text" name="father_lname" size="15">
+                    </td>
+                </tr>
+                <tr class="form-row">
+                    <td>
+                        <table>
+                            <tr>
+                                <td style="width: 40%;"><label>9) Physician (check all that apply):</label></td>
+                                <td><select name="physician" multiple style="width: 150px;">
+                                    <option>Dr. Warren Albert</option>
+                                    <option>Dr. Maria Alvarez</option>
+                                    <option>Dr. Karen Brinkman</option>
+                                    <option>Dr. Micheal Kenny</option>
+                                </select></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <div class="button-area">
+                <input type="button" value="Register">
+                <input type="button" value="Cancel">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

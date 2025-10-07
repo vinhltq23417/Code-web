@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>Contact the editorial office - Luong Tran Quang Vinh</title>
+        <style>
+            body
+            {
+            background-color: #f9f9f9;
+            }
+            .container
+            {
+            width: 600px;
+            margin: 32px auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 16px;
+            }
+            h2
+            {
+            margin-top: auto;
+            margin-bottom: 16px;
+            }
+            table
+            {
+            width: 100%;
+            border-collapse: collapse;
+            }
+            td
+            {
+            padding: 6px;
+            vertical-align: top;
+            }
+            label
+            {
+            display: block;
+            margin-bottom: 4px;
+            }
+            input[type="text"],
+            input[type="email"],
+            select,
+            textarea
+            {
+            width: 100%;
+            padding: 6px;
+            box-sizing: border-box;
+            }
+            textarea
+            {
+            height: 120px;
+            resize: vertical;
+            }
+            .btn-submit
+            {
+            background-color: #8b1e3f;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            }
+            .btn-submit:hover
+            {
+            background-color: #a52853;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Contact the editorial office</h2>
+            <form>
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <label>Full name</label>
+                            <input type="text" name="fullname">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:60%;">
+                            <label>Email</label>
+                            <input type="email" name="email">
+                        </td>
+                        <td style="width:40%;">
+                            <label>Send to</label>
+                            <select name="department">
+                                <option>Editorial board</option>
+                                <option>News Department</option>
+                                <option>Board of Perspectives</option>
+                                <option>World Board</option>
+                                <option>Business Department</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Title</label>
+                            <input type="text" name="title">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Content</label>
+                            <textarea name="content"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="left">
+                            <button class="btn-submit" type="submit">Send</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

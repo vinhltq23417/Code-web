@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>Product - Luong Tran Quang Vinh</title>
+        <style>
+            table
+            {
+                width: 800px;
+                margin: auto;
+                border-collapse: collapse;
+            }
+            th, td
+            {
+                padding: 6px 10px;
+                text-align: center;
+            }
+            th
+            {
+                font-weight: bold;
+                background: none;
+            }
+            input[type="text"]
+            {
+                width: 90%;
+                box-sizing: border-box;
+                text-align: center;
+            }
+            .btn-sum
+            {
+                background-color: orange;
+                border: 1px solid #a97c00;
+                padding: 6px 14px;
+                cursor: pointer;
+            }
+            .total-row td
+            {
+                padding-top: 8px;
+                padding-bottom: 4px;
+            }
+            .total-label
+            {
+                text-align: right;
+            }
+
+            .total-input
+            {
+                width: 90%;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <form name="frm_order">
+            <table>
+                <tr>
+                    <th>Part Number</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Item Total</th>
+                </tr>
+                <tr>
+                    <td>C112</td>
+                    <td>Mouse</td>
+                    <td>19.95$</td>
+                    <td><input type="text" name="qty1"></td>
+                    <td><input type="text" name="item1"></td>
+                </tr>
+                <tr>
+                    <td>B124</td>
+                    <td>Keyboard US</td>
+                    <td>29.95$</td>
+                    <td><input type="text" name="qty2"></td>
+                    <td><input type="text" name="item2"></td>
+                </tr>
+                <tr>
+                    <td>U125</td>
+                    <td>USB KingMax</td>
+                    <td>39.95$</td>
+                    <td><input type="text" name="qty3"></td>
+                    <td><input type="text" name="item3"></td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <hr/>
+                    </td>
+                </tr>
+                <tr class="total-row">
+                    <td colspan="3"></td>
+                    <td class="total-label">Total:</td>
+                    <td><input type="text" name="total" class="total-input"></td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="text-align: right;">
+                        <button type="button" class="btn-sum">Sum</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
