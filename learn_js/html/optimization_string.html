@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>
+			Optimization string - Luong Tran Quang Vinh
+		</title>
+        <script>
+            function process_optimization()
+            {
+                input=document.getElementById("name_input").value
+                input = input.trim().replace(/\s+/g, " ");
+                word=input.split(" ")
+                result= []
+                for(i=0;i<word.length;i++){
+                    w=word[i]
+                    if (w.length>0){
+                        opt=w.charAt(0).toUpperCase()+w.slice(1).toLowerCase()
+                        result+=opt+" "
+                    }
+                }
+                result=result.trim()
+                name_output.innerText=result
+            }
+        </script>
+	</head>
+	<body>
+		<form name="my_form">
+            <table>
+                <tr>
+                    <td>Input:</td>
+                    <td><input type="text" name="name_input" id="name_input" oninput="process_optimization()"/></td>
+                </tr>
+                <tr>
+                    <td>Output:</td>
+                    <td id="name_output"></td>
+                </tr>
+            </table>
+        </form>
+	</body>
+</html>

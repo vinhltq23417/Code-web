@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>
+			DOM 2 _ Luong Tran Quang Vinh
+		</title>
+        
+	</head>
+	<body>
+       <form name="my_form">
+            <fieldset>
+                <legend>Customer Information:</legend>
+                <table>
+                    <tr>
+                        <td>Customer Name:</td>
+                        <td><input type="text" name="customer_name" id="customer_name"></td>
+                    </tr>
+                    <tr>
+                        <td>Customer Age:</td>
+                        <td><input type="text" name="customer_age" id="customer_age"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <button type="button" onclick="save_customer()">Save customer</button>
+       </form>
+       <table border="1">
+            <thead>
+                <tr>
+                    <th>Customer Name:</th>
+                    <th>Customer Age:</th>
+                </tr>
+            </thead>
+            <tbody id="container">
+            </tbody>
+       </table>
+       <script type="text/javascript">
+            function save_customer(){
+                container=document.getElementById("container")
+                tr=document.createElement("tr")
+                td_name=document.createElement("td")
+                td_name.innerText=my_form.customer_name.value
+                tr.appendChild(td_name)
+                td_age=document.createElement("td")
+                td_age.innerText=my_form.customer_age.value
+                tr.appendChild(td_age)
+                container.appendChild(tr)
+            }
+        </script>
+	</body>
+</html>

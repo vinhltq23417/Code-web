@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>
+			List Object - Luong Tran Quang Vinh
+		</title>
+        <script type="text/javascript">
+            var arr_products=[
+                {Id:"P01",Name:"Coca",Quantity:25},
+                {Id:"P02",Name:"Pepsi",Quantity:10},
+                {Id:"P03",Name:"Sting",Quantity:17},
+            ]
+        </script>
+	</head>
+	<body>
+		<table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>name</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody id="container">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <script type="text/javascript">
+            //alert(arr_product.length)
+            container.innerHTML=""
+            for(i=0;i<arr_products.length;i++){
+                item=arr_products[i]
+                row="<tr>"+"<td>"+item.Id+"</td>"+"<td>"+item.Name+"</td>"+"<td>"+item.Quantity+"</td>"+"</tr>"
+                container.innerHTML+=row
+            }
+            
+        </script>
+	</body>
+</html>
