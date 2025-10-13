@@ -1,0 +1,149 @@
+<html>
+	<head>
+		<title>
+			String Processing - Luong Tran Quang Vinh
+		</title>
+        <style>
+            table
+            {
+                border-collapse: collapse;
+                margin: 10px auto;
+                width: 80%;
+            }
+            td
+            {
+                border: 1px solid black;
+                text-align: center;
+                vertical-align: middle;
+                padding: 5px;
+            }
+            input[type="text"]
+            {
+                width: 95%;
+                height: 7em;
+                font-size: 16px;
+            }
+            #output {
+                width: 95%;
+                height: 7em;
+                display: inline-block;
+                background-color: #f9f9f9;
+                border: 1px solid #ccc;
+                text-align: left;
+                vertical-align: top;
+                padding: 10px;
+                overflow-y: auto;
+                white-space: pre-wrap;
+                font-size: 16px;
+            }
+            button
+            {
+                width: 90%;
+                margin: 5px auto;
+                display: block;
+                cursor: pointer;
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                border: 1px solid #999;
+            }
+            button:hover
+            {
+                background-color: #dcdcdc;
+            }
+        </style>
+        <script>
+            str_input="";
+            function enter_input()
+            {
+                str_input=document.getElementById("input").value
+            }
+            function count_upper()
+            {
+                count = 0
+                for(i=0;i<str_input.length;i++){
+                    if (str_input[i]>="A"&& str_input[i]<="Z") count++
+                }
+                output.innerText=count
+            }
+            function upper_dis()
+            {
+                output.innerText=str_input.toUpperCase()
+            }
+            function lower_dis()
+            {
+                output.innerText=str_input.toLowerCase()
+            }
+            function count_lower()
+            {
+                count=0
+                for(i=0;i<str_input.length;i++){
+                    if (str_input[i]>="a"&& str_input[i]<="z") count++
+                }
+                output.innerText=count
+            }
+            function word_line()
+            {
+                word=str_input.split(/\s+/)
+                output.innerText=word.join("\n")
+            }
+            function count_word()
+            {
+                word=str_input.trim().split(/\s+/)
+                count=word.filter(w=>w.length>0).length
+                output.innerText=count
+            }
+            function vowels()
+            {
+                v="aeiouAEIOU"
+                vowels_list=""
+                consonant_list=""
+                for (i=0;i<str_input.length;i++){
+                    ch=str_input[i]
+                    if (/[a-zA-Z]/.test(ch))
+                    {
+                    if (v.includes(ch)) vowelsList += ch + " ";
+                    else consonantsList += ch + " ";
+                    }
+                }
+                output.innerText=vowels_list.trim() + consonant_list.trim()
+            }
+            function website()
+            {
+                window.open("https://www.w3schools.com","_blank")
+            }
+        </script>
+	</head>
+	<body>
+		<form name="my_form">
+            <table border="1">
+                <tr>
+                    <td rowspan="5"><input type="text" name="input" id="input"></td>
+                    <td rowspan="5" id="output"></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td><button type="button" onclick="enter_input()">Enter data</button></td>
+                    <td><button type="button" onclick="count_upper()">Count the number of uppercase characters</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="upper_dis()">Upper display</button></td>
+                    <td><button type="button" onclick="word_line()">Output one word per line</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="lower_dis()">Lowercsae display</button></td>
+                    <td><button type="button" onclick="count_word()">Word count</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="count_lower()">Count the number of lowercase characters</button></td>
+                    <td><button type="button" onclick="vowels">Print vowels, consonants</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="button" onclick="website()">W3C's String Processing Website</button></td>
+                </tr>
+            </table>
+        </form>
+	</body>
+</html>
