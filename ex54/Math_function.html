@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>
+			Math function - Lương Trần Quang Vinh
+		</title>
+        <script>
+            function getvalue()
+            {
+                a=document.getElementById("a").value
+                b=document.getElementById("b").value
+                c=document.getElementById("c").value
+                return {a,b,c}
+            }
+            function max_func()
+            {
+                const{a,b,c}=getvalue()
+                max_value=Math.max(a,b,c)
+                result.innerText=max_value
+            }
+            function min_func()
+            {
+                const{a,b,c}=getvalue()
+                min_value=Math.min(a,b,c)
+                result.innerText=min_value
+            }
+            function sin_func()
+            {
+                const{a}=getvalue()
+                sin_value=Math.sin(a)
+                result.innerText=sin_value
+            }
+            function cos_func()
+            {
+                const{a}=getvalue()
+                cos_value=Math.cos(a)
+                result.innerText=cos_value
+            }
+            function logit_func()
+            {
+                const{a,bl}=getvalue()
+                pow_value=Math.pow(a,b)
+                result.innerText=pow_value
+            }
+        </script>
+	</head>
+	<body>
+		<table id="container" border="1">
+            <tr>
+                <td>a:</td>
+                <td><input type="text" name="a" id="a"/></td>
+            </tr>
+            <tr>
+                <td>b:</td>
+                <td><input type="text" name="b" id="b"/></td>
+            </tr>
+            <tr>
+                <td>c:</td>
+                <td><input type="text" name="c" id="c"/></td>
+            </tr>
+            <tr>
+                <td>Results:</td>
+                <td id="result"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="button" onclick="max_func()">Max</button>
+                    <button type="button" onclick="min_func()">Min</button>
+                    <button type="button" onclick="sin_func()">sin(a)</button>
+                    <button type="button" onclick="cos_func()">cos(a)</button>
+                    <button type="button" onclick="logit_func()">a^b</button>
+                </td>
+            </tr>
+        </table>
+	</body>
+</html>

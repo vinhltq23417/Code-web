@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<title>
+			The quadratic equation - Lương Trần Quang Vinh
+		</title>
+        <style type="text/css">
+            td{text-align: center;margin: auto;}
+            input{text-align: left;width: 95%}
+        </style>
+        <script type="text/javascript">
+            function getvalue()
+            {
+                a=document.getElementById("a").value
+                b=document.getElementById("b").value
+                c=document.getElementById("c").value
+                return {a,b,c}
+            }
+            function clearr()
+            {
+                document.getElementById("result").innerText=""
+                document.getElementById("a").value=""
+                document.getElementById("b").value=""
+                document.getElementById("c").value=""
+            }
+            function solve()
+            {
+                const{a,b,c}=getvalue()
+                const result=document.getElementById("result")
+                if (a==0){
+                    if (b==0){
+                        if (c===0){result.innerText='Vo so nghiem'}
+                        else {result.innerText='Vo nghiem'}
+                    }
+                }
+                else{
+                    delta=b*b-4*a*c
+                    if (delta==0){
+                        const x=-b/(2*a)
+                        result.innerText="x="+x
+                    }
+                    else if (delta<0){result.innerText="Vo nghiem"}
+                    else{
+                        const x1=(-b+Math.sqrt(delta))/(2*a)
+                        const x2=(-b-math.sqrt(delta))/(2*a)
+                        result.innerText="x1="+x1+";"+"x2="+x2
+                    }
+                }
+            }
+        </script>
+	</head>
+	<body>
+		<table id="container" border="1" width="300px">
+            <tr style="background-color: paleturquoise;text-align: center;"><td colspan="2">The quadratic equation</td></tr>
+            <tr cols="50px,*">
+                <td>a:</td>
+                <td><input type="number" id="a"/></td>
+            </tr>
+            <tr>
+                <td>b:</td>
+                <td><input type="number" id="b"/></td>
+            </tr>
+            <tr>
+                <td>c:</td>
+                <td><input type="number" id="c"/></td>
+            </tr>
+            <tr>
+                <td>Result:</td>
+                <td id="result"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="button" onclick="solve()">Find solution</button><button type="button" onclick="clearr()">Clear</button></td>
+            </tr>
+        </table>
+	</body>
+</html>
